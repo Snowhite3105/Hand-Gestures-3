@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <title>Hand Gestures Recognition by Lokankshi Sharma</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+  
+    <center>
+<h3 class="btn btn-info heading"> Hand Gestures Recognition App
+  <br>
+<span> &#128077; </span>
+<span> &#128078; </span>
+<span> &#9996;  </span>
+<span> &#9994; </span>
+<span> &#128076; </span>
+</h3>
+      <br><br>
+
+      <p style="font-size: 22px;">Take your selfie for our app to recognise what hand gesture you are displaying. 
+      	<br>
+         The hand gesture can only be from the list given above
+        <br>
+      </p>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+        <label> Webcam View - </label>
+      <div id="camera"> </div>
+<br> <br>
+<button onclick="take_snapshot();" class="btn btn-warning"> Capture Image</button>
+</div>
+
+<div class="col-md-4 col-sm-12 col-xs-12">
+  <label> Prediction 1 - </label>
+  <p class="hand_name" id="hg_name"></p>
+  <p class="hg" id="update_emoji"></p>
+
+  <label> Prediction 2 - </label>
+  <p class="hand_name2" id="hg_name2"></p>
+  <p class="hg" id="update_emoji1"></p>
+</div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12">
+	      <label>Snapshot - </label>
+        <div id="result"> </div>
+        <br><br>
+<button onclick="check()" class="btn btn-success"> Predict Hand Gesture </button>
+      </div>
+
+    </center>
+
+  </div>
+
+<script src="main.js"></script>
+
+  </body>
+</html>
